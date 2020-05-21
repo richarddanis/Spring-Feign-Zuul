@@ -1,0 +1,24 @@
+# Spring Configuration
+spring:
+  application:
+    name: @project.name@
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+
+# Swagger Documentation
+swagger:
+  service:
+    version: "1.0.0"
+    title: ${spring.application.name}
+    description: "Skeleton app swagger"
